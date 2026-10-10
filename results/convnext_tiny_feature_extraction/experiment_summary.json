@@ -1,0 +1,53 @@
+{
+    "experiment_name": "convnext_tiny_feature_extraction",
+    "model_architecture": "ConvNeXt-Tiny",
+    "transfer_learning_mode": "Feature Extraction",
+    "dataset": {
+        "number_of_classes": 9,
+        "class_names": [
+            "ipeiros",
+            "kriti",
+            "makedonia",
+            "nisia_aigaiou",
+            "nisia_ioniou",
+            "peloponnisos",
+            "sterea_ellada",
+            "thessalia",
+            "thraki"
+        ],
+        "image_size": 224,
+        "batch_size": 16
+    },
+    "hyperparameters": {
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "maximum_epochs": 25,
+        "early_stopping_patience": 5,
+        "optimizer": "Adam",
+        "criterion": "CrossEntropyLoss"
+    },
+    "parameters": {
+        "total_parameters": 27827049,
+        "trainable_parameters": 6921,
+        "frozen_parameters": 27820128
+    },
+    "training": {
+        "training_time_seconds": 137.61103320121765,
+        "epochs_completed": 25,
+        "best_epoch": 24,
+        "best_validation_loss": 1.1497034685952323,
+        "best_validation_accuracy": 0.5873015873015873
+    },
+    "test_metrics": {
+        "accuracy": 0.5645161290322581,
+        "macro_precision": 0.5962962962962963,
+        "macro_recall": 0.5555555555555556,
+        "macro_f1": 0.5658921144215262,
+        "weighted_f1": 0.5717366125335765
+    },
+    "saved_files": {
+        "best_checkpoint": "/content/drive/MyDrive/ptyxiaki/models/checkpoints/convnext_tiny_feature_extraction/best_checkpoint.pth",
+        "final_model": "/content/drive/MyDrive/ptyxiaki/models/trained/convnext_tiny_feature_extraction/convnext_tiny_feature_extraction.pth",
+        "results_directory": "/content/drive/MyDrive/ptyxiaki/results/convnext_tiny_feature_extraction"
+    }
+}

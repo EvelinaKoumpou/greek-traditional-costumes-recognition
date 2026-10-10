@@ -1,0 +1,9 @@
+{
+    "experiment_name": "resnet18_feature_extraction",
+    "accuracy": 0.41935483870967744,
+    "top3_accuracy": 0.8709677419354839,
+    "macro_precision": 0.49444444444444435,
+    "macro_recall": 0.4166666666666667,
+    "macro_f1": 0.4091658885776533,
+    "weighted_f1": 0.4119890967139544
+}

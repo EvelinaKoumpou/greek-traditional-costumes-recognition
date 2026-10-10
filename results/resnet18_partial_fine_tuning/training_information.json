@@ -1,0 +1,8 @@
+{
+    "experiment_name": "resnet18_partial_fine_tuning",
+    "training_time_seconds": 79.12439489364624,
+    "epochs_completed": 12,
+    "best_epoch": 7,
+    "best_validation_loss": 1.2738404150993106,
+    "best_validation_accuracy": 0.6031746031746031
+}

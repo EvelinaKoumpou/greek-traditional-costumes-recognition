@@ -1,0 +1,53 @@
+{
+    "experiment_name": "convnext_tiny_partial_fine_tuning",
+    "model_architecture": "ConvNeXt-Tiny",
+    "transfer_learning_mode": "Partial Fine-Tuning (last feature stage + classifier)",
+    "dataset": {
+        "number_of_classes": 9,
+        "class_names": [
+            "ipeiros",
+            "kriti",
+            "makedonia",
+            "nisia_aigaiou",
+            "nisia_ioniou",
+            "peloponnisos",
+            "sterea_ellada",
+            "thessalia",
+            "thraki"
+        ],
+        "image_size": 224,
+        "batch_size": 16
+    },
+    "hyperparameters": {
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "maximum_epochs": 25,
+        "early_stopping_patience": 5,
+        "optimizer": "Adam",
+        "criterion": "CrossEntropyLoss"
+    },
+    "parameters": {
+        "total_parameters": 27827049,
+        "trainable_parameters": 14297865,
+        "frozen_parameters": 13529184
+    },
+    "training": {
+        "training_time_seconds": 115.64328789710999,
+        "epochs_completed": 21,
+        "best_epoch": 16,
+        "best_validation_loss": 1.0732803609636095,
+        "best_validation_accuracy": 0.6507936507936508
+    },
+    "test_metrics": {
+        "accuracy": 0.7096774193548387,
+        "macro_precision": 0.730587622254289,
+        "macro_recall": 0.7083333333333334,
+        "macro_f1": 0.7063714407367658,
+        "weighted_f1": 0.7055718874154907
+    },
+    "saved_files": {
+        "best_checkpoint": "/content/drive/MyDrive/ptyxiaki/models/checkpoints/convnext_tiny_partial_fine_tuning/best_checkpoint.pth",
+        "final_model": "/content/drive/MyDrive/ptyxiaki/models/trained/convnext_tiny_partial_fine_tuning/convnext_tiny_partial_fine_tuning.pth",
+        "results_directory": "/content/drive/MyDrive/ptyxiaki/results/convnext_tiny_partial_fine_tuning"
+    }
+}

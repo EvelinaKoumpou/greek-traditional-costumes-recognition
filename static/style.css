@@ -1,0 +1,1134 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#efe6da;
+  color:#1e1e1e;
+  font-family:'Inter',sans-serif;
+}
+
+.noScroll{
+  overflow:hidden;
+}
+
+/* NAVBAR */
+
+.nav{
+  padding:28px 60px;
+}
+
+.navInner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+}
+
+.logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:38px;
+  font-weight:700;
+  line-height:0.9;
+  max-width:320px;
+}
+
+.logo span{
+  display:block;
+  margin-top:8px;
+  font-size:12px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  font-family:'Inter',sans-serif;
+}
+
+.menu{
+  display:flex;
+  gap:28px;
+  flex-wrap:wrap;
+}
+
+.menu a{
+  text-decoration:none;
+  color:#1e1e1e;
+  font-size:16px;
+  font-weight:500;
+}
+
+.menu a:hover{
+  opacity:0.7;
+}
+
+.menu a.is-active{
+  border-bottom:2px solid #1e1e1e;
+  padding-bottom:4px;
+}
+
+/* GENERAL */
+
+.wrap,
+.page{
+  width:min(1150px,92%);
+  margin:auto;
+}
+
+.page{
+  padding-bottom:90px;
+}
+
+.pageIntro{
+  padding:56px 0;
+}
+
+.regionsIntro{
+  text-align:center;
+  max-width:850px;
+  margin:auto;
+}
+
+.heroEyebrow{
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:12px;
+  font-weight:700;
+  opacity:0.7;
+}
+
+.pageTitle{
+  font-family:'Cormorant Garamond',serif;
+  font-size:58px;
+  line-height:1.05;
+  margin:14px 0 20px;
+}
+
+.pageLead{
+  max-width:780px;
+  margin:auto;
+  line-height:1.8;
+  font-size:17px;
+}
+
+/* ΑΡΧΙΚΗ ΣΕΛΙΔΑ */
+
+.hero{
+  display:grid;
+  grid-template-columns:1.05fr 0.95fr;
+  gap:56px;
+  align-items:center;
+  min-height:78vh;
+}
+
+.heroTitle{
+  font-family:'Cormorant Garamond',serif;
+  font-size:72px;
+  line-height:0.98;
+  margin:18px 0;
+}
+
+.heroLead{
+  max-width:620px;
+  line-height:1.8;
+  font-size:17px;
+}
+
+.heroBtns{
+  display:flex;
+  gap:16px;
+  margin-top:32px;
+  flex-wrap:wrap;
+}
+
+.btnPrimary,
+.btnGhost{
+  padding:13px 22px;
+  border-radius:40px;
+  text-decoration:none;
+  font-size:15px;
+  font-weight:600;
+  transition:0.2s;
+}
+
+.btnPrimary{
+  background:#1e1e1e;
+  color:white;
+}
+
+.btnGhost{
+  border:1px solid #1e1e1e;
+  color:#1e1e1e;
+}
+
+.btnGhost:hover{
+  background:#1e1e1e;
+  color:white;
+}
+
+.heroMedia img{
+  width:100%;
+  border-radius:24px;
+  object-fit:cover;
+  display:block;
+}
+
+/* ΚΑΡΤΕΣ ΠΕΡΙΟΧΩΝ */
+
+.regionsList{
+  display:flex;
+  flex-direction:column;
+  gap:34px;
+}
+
+.regionHorizontalCard{
+  display:grid;
+  grid-template-columns:390px 1fr;
+  gap:36px;
+  align-items:center;
+  background:rgba(255,255,255,0.72);
+  border-radius:34px;
+  padding:22px;
+  box-shadow:0 24px 70px rgba(0,0,0,0.10);
+  transition:0.25s ease;
+}
+
+.regionHorizontalCard:hover{
+  transform:translateY(-4px);
+  box-shadow:0 30px 85px rgba(0,0,0,0.14);
+}
+
+.regionImageBox{
+  height:330px;
+  border-radius:26px;
+  overflow:hidden;
+  background:#ddd;
+}
+
+.regionImageBox img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:0.4s ease;
+}
+
+.regionHorizontalCard:hover .regionImageBox img{
+  transform:scale(1.04);
+}
+
+.regionInfo{
+  padding:18px 18px 18px 0;
+}
+
+.regionInfo h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:50px;
+  line-height:1;
+  margin-bottom:18px;
+}
+
+.regionInfo p{
+  font-size:17px;
+  line-height:1.85;
+  max-width:650px;
+}
+
+.featureBadges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:24px 0 28px;
+}
+
+.featureBadges span{
+  background:#f8f1e8;
+  border:1px solid rgba(30,30,30,0.08);
+  padding:10px 15px;
+  border-radius:999px;
+  font-size:14px;
+  font-weight:600;
+}
+
+.moreBtn{
+  border:none;
+  background:#1e1e1e;
+  color:white;
+  padding:13px 24px;
+  border-radius:999px;
+  cursor:pointer;
+  font-weight:700;
+  font-size:15px;
+  transition:0.25s ease;
+}
+
+.moreBtn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.18);
+}
+
+/* MODAL */
+
+.modalOverlay{
+  position:fixed;
+  inset:0;
+  background:rgba(30,30,30,0.55);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:28px;
+  z-index:999;
+}
+
+.modalOverlay.is-open{
+  display:flex;
+}
+
+.modalBox{
+  background:#efe6da;
+  width:min(980px,96%);
+  max-height:92vh;
+  overflow:auto;
+  border-radius:32px;
+  padding:36px;
+  position:relative;
+  box-shadow:0 35px 100px rgba(0,0,0,0.35);
+}
+
+.closeBtn{
+  position:absolute;
+  top:20px;
+  right:24px;
+  width:42px;
+  height:42px;
+  border:none;
+  border-radius:50%;
+  background:rgba(255,255,255,0.9);
+  font-size:30px;
+  cursor:pointer;
+  z-index:2;
+}
+
+.closeBtn:hover{
+  background:#1e1e1e;
+  color:white;
+}
+
+/* ΠΑΝΩ ΜΕΡΟΣ MODAL: ΕΙΚΟΝΑ ΑΡΙΣΤΕΡΑ - ΚΕΙΜΕΝΟ ΔΕΞΙΑ */
+
+.modalHeader{
+  display:grid;
+  grid-template-columns:320px 1fr;
+  gap:35px;
+  align-items:center;
+  margin-bottom:45px;
+}
+
+.modalHeaderImage img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  border-radius:22px;
+  display:block;
+}
+
+.modalHeaderText h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:48px;
+  line-height:1;
+  margin-bottom:18px;
+}
+
+.modalHeaderText p{
+  font-size:17px;
+  line-height:1.9;
+  max-width:600px;
+}
+
+/* MINIMAL ΠΕΡΙΕΧΟΜΕΝΟ MODAL */
+
+.minimalSection{
+  border-top:1px solid rgba(30,30,30,0.18);
+  padding:30px 0;
+}
+
+.minimalSection h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:32px;
+  margin-bottom:16px;
+}
+
+.minimalSection p{
+  font-size:16px;
+  line-height:1.85;
+  margin-bottom:12px;
+}
+
+.minimalSection ul{
+  padding-left:20px;
+}
+
+.minimalSection li{
+  font-size:16px;
+  line-height:1.8;
+  margin-bottom:8px;
+}
+
+/* ΧΑΡΑΚΤΗΡΙΣΤΙΚΕΣ ΦΟΡΕΣΙΕΣ */
+
+.simpleList{
+  display:grid;
+  gap:16px;
+}
+
+.simpleList h4{
+    font-family:'Cormorant Garamond', serif;
+    font-size:22px;
+    font-weight:700;
+    margin:0px 0 0px;
+    color:#1e1e1e;
+}
+
+.simpleList p{
+    font-size:16px;
+    line-height:1.9;
+    color:#333;
+    margin-bottom:18px;
+}
+
+.simpleItem{
+  border-bottom:1px solid rgba(30,30,30,0.12);
+  padding-bottom:16px;
+}
+
+.simpleItem h4{
+  font-family:'Cormorant Garamond',serif;
+  font-size:28px;
+  margin-bottom:8px;
+}
+
+.simpleItem p{
+  margin:0;
+}
+
+.costumeRow{
+
+    display:grid;
+    grid-template-columns:170px 1fr;
+    gap:28px;
+
+    align-items:center;
+
+    padding:24px 0;
+
+    border-bottom:1px solid rgba(0,0,0,.08);
+
+}
+
+.costumeRow:last-child{
+    border-bottom:none;
+}
+
+.costumeRow img{
+
+    width:170px;
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+}
+
+.costumeRow h4{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:28px;
+
+    margin-bottom:12px;
+
+}
+
+.costumeRow p{
+
+    line-height:1.9;
+
+    font-size:16px;
+
+}
+
+/* ΧΡΩΜΑΤΑ ΚΑΙ ΣΥΜΒΟΛΙΣΜΟΙ */
+
+.simpleSymbols{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:22px 34px;
+  margin-top:12px;
+}
+
+.simpleSymbols p{
+  display:flex;
+  align-items:flex-start;
+  gap:13px;
+  margin:0;
+  line-height:1.4;
+}
+
+.simpleSymbols strong{
+  display:block;
+  font-size:16px;
+  margin-bottom:4px;
+}
+
+.simpleSymbols em{
+  display:block;
+  font-style:normal;
+  font-size:15px;
+  line-height:1.6;
+  color:#555;
+}
+
+.colorBox{
+  width:20px;
+  height:20px;
+  border-radius:5px;
+  flex-shrink:0;
+  margin-top:2px;
+  border:1px solid rgba(0,0,0,0.15);
+  box-shadow:0 2px 6px rgba(0,0,0,0.12);
+}
+
+.colorBox.red{
+  background:#c0392b;
+}
+
+.colorBox.white{
+  background:#ffffff;
+}
+
+.colorBox.black{
+  background:#1e1e1e;
+}
+
+.colorBox.gold{
+  background:#d4af37;
+}
+
+.colorBox.green{
+  background:#4f7f3d;
+}
+
+.colorBox.blue{
+    background:#3b6ea8;
+}
+
+.colorBox.brown{
+    background:#7a5a3a;
+}
+
+.colorBox.silver{
+    background:#bfc4c9;
+}
+
+/* ΤΙ ΝΑ ΠΑΡΑΤΗΡΗΣΕΙΣ */
+
+.observeMinimal{
+  background:#1e1e1e;
+  color:white;
+  border-radius:24px;
+  padding:30px;
+  margin:10px 0 30px;
+}
+
+.observeMinimal h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:34px;
+  margin-bottom:14px;
+}
+
+.observeMinimal p{
+  line-height:1.85;
+  font-size:16px;
+}
+
+/* ABOUT */
+
+.aboutGrid,
+.regionsGrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+}
+
+.aboutCard,
+.regionCard{
+  background:rgba(255,255,255,0.55);
+  border-radius:24px;
+  padding:28px;
+}
+
+.aboutCard h2,
+.regionCard h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:28px;
+  margin-bottom:14px;
+}
+
+.aboutCard p,
+.regionCard p,
+.aboutCard li{
+  line-height:1.8;
+  font-size:16px;
+}
+
+.aboutCard ul{
+  padding-left:18px;
+}
+
+/* =========================
+   GENERAL RESPONSIVE
+========================= */
+
+@media(max-width:950px){
+
+  .nav{
+    padding:24px;
+  }
+
+  .navInner{
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .menu{
+    justify-content:center;
+    gap:18px;
+  }
+
+  .logo{
+    text-align:center;
+    font-size:30px;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+  }
+
+  .heroTitle{
+    font-size:48px;
+  }
+
+  .pageTitle{
+    font-size:42px;
+  }
+
+  .regionHorizontalCard{
+    grid-template-columns:1fr;
+    gap:22px;
+  }
+
+  .regionInfo{
+    padding:0 6px 10px;
+  }
+
+  .regionInfo h2{
+    font-size:42px;
+  }
+
+  .regionImageBox{
+    height:360px;
+  }
+
+  .modalHeader{
+    grid-template-columns:1fr;
+  }
+
+  .modalHeaderImage img{
+    height:340px;
+  }
+
+  .modalHeaderText h2{
+    font-size:42px;
+  }
+
+}
+
+@media(max-width:800px){
+
+  .costumeRow{
+    grid-template-columns:1fr;
+  }
+
+  .costumeRow img{
+    width:100%;
+    height:340px;
+  }
+
+}
+
+@media(max-width:560px){
+
+  .page{
+    width:92%;
+  }
+
+  .pageIntro{
+    padding:38px 0;
+  }
+
+  .pageTitle{
+    font-size:36px;
+  }
+
+  .regionHorizontalCard{
+    padding:14px;
+    border-radius:26px;
+  }
+
+  .regionImageBox{
+    height:280px;
+    border-radius:20px;
+  }
+
+  .regionInfo h2{
+    font-size:36px;
+  }
+
+  .regionInfo p{
+    font-size:15px;
+  }
+
+  .featureBadges span{
+    font-size:13px;
+    padding:9px 12px;
+  }
+
+  .modalOverlay{
+    padding:12px;
+  }
+
+  .modalBox{
+    padding:22px;
+    border-radius:26px;
+  }
+
+  .modalHeaderImage img{
+    height:260px;
+  }
+
+  .modalHeaderText h2{
+    font-size:32px;
+  }
+
+  .minimalSection h3{
+    font-size:29px;
+  }
+
+  .observeMinimal{
+    padding:24px;
+  }
+
+  .simpleSymbols{
+    grid-template-columns:1fr;
+  }
+
+}
+
+/* =========================
+   RECOGNITION PAGE
+========================= */
+
+.recognitionIntro{
+  padding-bottom:32px;
+}
+
+.recognitionLayout{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(320px,.8fr);
+  gap:30px;
+  align-items:stretch;
+}
+
+.uploadBox{
+  margin-top:0;
+  padding:34px;
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+  background:rgba(255,255,255,.56);
+  border:1px solid rgba(30,30,30,.08);
+  border-radius:28px;
+  text-align:left;
+  box-shadow:0 18px 55px rgba(30,30,30,.07);
+}
+
+.uploadArea{
+  position:relative;
+  min-height:310px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  border:2px dashed rgba(30,30,30,.25);
+  border-radius:24px;
+  background:rgba(255,255,255,.42);
+  cursor:pointer;
+  transition:.25s ease;
+}
+
+.uploadArea:hover{
+  border-color:#1e1e1e;
+  background:rgba(255,255,255,.68);
+  transform:translateY(-2px);
+}
+
+.uploadArea.has-image{
+  border-style:solid;
+  background:#fff;
+}
+
+.uploadArea input[type="file"]{
+  position:absolute;
+  width:1px;
+  height:1px;
+  opacity:0;
+  pointer-events:none;
+}
+
+.uploadPlaceholder{
+  padding:34px;
+  text-align:center;
+}
+
+.uploadIcon{
+  width:68px;
+  height:68px;
+  margin:0 auto 18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:#1e1e1e;
+  color:#fff;
+  font-size:30px;
+}
+
+.uploadPlaceholder h2{
+  margin-bottom:10px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:32px;
+  line-height:1.1;
+}
+
+.uploadPlaceholder p{
+  line-height:1.7;
+  opacity:.7;
+}
+
+.uploadHint{
+  display:inline-block;
+  margin-top:16px;
+  padding:9px 15px;
+  border:1px solid rgba(30,30,30,.18);
+  border-radius:30px;
+  font-size:13px;
+  font-weight:600;
+}
+
+.imagePreview{
+  display:none;
+  width:100%;
+  height:310px;
+  object-fit:contain;
+  background:#f6f1e9;
+}
+
+.uploadArea.has-image .uploadPlaceholder{
+  display:none;
+}
+
+.uploadArea.has-image .imagePreview{
+  display:block;
+}
+
+.fileDetails{
+  display:none;
+  padding:14px 17px;
+  background:rgba(255,255,255,.7);
+  border-radius:16px;
+  font-size:14px;
+}
+
+.fileDetails.is-visible{
+  display:block;
+}
+
+.fileName{
+  display:block;
+  font-weight:700;
+  overflow-wrap:anywhere;
+}
+
+.fileHelp{
+  display:block;
+  margin-top:4px;
+  opacity:.65;
+}
+
+.recognitionActions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.recognitionActions .btnPrimary{
+  flex:1;
+  min-width:190px;
+  border:none;
+  cursor:pointer;
+  font-family:'Inter',sans-serif;
+}
+
+.changeImageBtn{
+  padding:13px 20px;
+  border:1px solid #1e1e1e;
+  border-radius:40px;
+  background:transparent;
+  color:#1e1e1e;
+  font-family:'Inter',sans-serif;
+  font-weight:600;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.changeImageBtn:hover{
+  background:#1e1e1e;
+  color:#fff;
+}
+
+/* =========================
+   RECOGNITION INFORMATION
+========================= */
+
+.recognitionInfo{
+  padding:34px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:#1e1e1e;
+  color:#fff;
+  border-radius:28px;
+  box-shadow:0 18px 55px rgba(30,30,30,.14);
+}
+
+.recognitionInfo .heroEyebrow{
+  opacity:.7;
+}
+
+.recognitionInfo h2{
+  margin:16px 0;
+  font-family:'Cormorant Garamond',serif;
+  font-size:42px;
+  line-height:1.05;
+}
+
+.recognitionInfo p{
+  line-height:1.8;
+  opacity:.82;
+}
+
+.recognitionSteps{
+  display:grid;
+  gap:14px;
+  margin-top:26px;
+}
+
+.recognitionStep{
+  display:flex;
+  align-items:flex-start;
+  gap:13px;
+}
+
+.recognitionStep span{
+  flex:0 0 34px;
+  width:34px;
+  height:34px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(255,255,255,.32);
+  border-radius:50%;
+  font-weight:700;
+}
+
+/* =========================
+   PREDICTION RESULTS
+========================= */
+
+.predictionSection{
+  margin-top:34px;
+  padding:38px;
+  background:rgba(255,255,255,.6);
+  border:1px solid rgba(30,30,30,.08);
+  border-radius:28px;
+  box-shadow:0 18px 55px rgba(30,30,30,.07);
+}
+
+.predictionSummary{
+  display:flex;
+  justify-content:space-between;
+  gap:26px;
+  align-items:flex-end;
+  padding-bottom:28px;
+  border-bottom:1px solid rgba(30,30,30,.12);
+}
+
+.predictionTitle{
+  margin-top:10px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:44px;
+  line-height:1.05;
+}
+
+.predictionConfidence{
+  flex:0 0 auto;
+  padding:15px 20px;
+  background:#1e1e1e;
+  color:#fff;
+  border-radius:18px;
+  text-align:center;
+  font-size:14px;
+}
+
+.predictionConfidence strong{
+  display:block;
+  margin-top:3px;
+  font-family:'Cormorant Garamond',serif;
+  font-size:32px;
+}
+
+.predictionGrid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+  margin-top:28px;
+}
+
+.predictionCard{
+  position:relative;
+  padding:24px;
+  overflow:hidden;
+  background:rgba(255,255,255,.76);
+  border:1px solid rgba(30,30,30,.08);
+  border-radius:22px;
+  transition:.25s;
+}
+
+.predictionCard:hover{
+  transform:translateY(-4px);
+}
+
+.predictionCard:first-child{
+  background:#1e1e1e;
+  color:#fff;
+}
+
+.predictionRank{
+  width:42px;
+  height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:24px;
+  border-radius:50%;
+  background:#1e1e1e;
+  color:#fff;
+  font-family:Arial, sans-serif;
+  font-weight:700;
+}
+
+.predictionCard:first-child .predictionRank{
+  background:#fff;
+  color:#1e1e1e;
+}
+
+.predictionInfo h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:29px;
+  line-height:1.1;
+}
+
+.predictionInfo p{
+  margin-top:7px;
+  font-size:18px;
+  font-weight:700;
+}
+
+.confidenceTrack{
+  height:9px;
+  margin-top:18px;
+  overflow:hidden;
+  background:rgba(30,30,30,.12);
+  border-radius:20px;
+}
+
+.predictionCard:first-child .confidenceTrack{
+  background:rgba(255,255,255,.2);
+}
+
+.confidenceFill{
+  height:100%;
+  background:#1e1e1e;
+  border-radius:20px;
+}
+
+.predictionCard:first-child .confidenceFill{
+  background:#fff;
+}
+
+/* =========================
+   RECOGNITION RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+  .recognitionLayout{
+    grid-template-columns:1fr;
+  }
+
+  .recognitionInfo{
+    min-height:300px;
+  }
+
+  .predictionGrid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:700px){
+
+  .uploadBox,
+  .recognitionInfo,
+  .predictionSection{
+    padding:24px;
+  }
+
+  .predictionSummary{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .predictionTitle{
+    font-size:35px;
+  }
+
+  .predictionConfidence{
+    width:100%;
+  }
+
+}

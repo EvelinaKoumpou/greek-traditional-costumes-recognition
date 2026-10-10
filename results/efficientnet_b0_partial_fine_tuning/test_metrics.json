@@ -1,0 +1,9 @@
+{
+    "experiment_name": "efficientnet_b0_partial_fine_tuning",
+    "accuracy": 0.6129032258064516,
+    "top3_accuracy": 0.9193548387096774,
+    "macro_precision": 0.6714125380792048,
+    "macro_recall": 0.6038359788359788,
+    "macro_f1": 0.607247276287524,
+    "weighted_f1": 0.6130149453728799
+}

@@ -1,0 +1,8 @@
+{
+    "experiment_name": "convnext_tiny_feature_extraction",
+    "training_time_seconds": 137.61103320121765,
+    "epochs_completed": 25,
+    "best_epoch": 24,
+    "best_validation_loss": 1.1497034685952323,
+    "best_validation_accuracy": 0.5873015873015873
+}

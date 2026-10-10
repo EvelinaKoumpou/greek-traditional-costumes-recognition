@@ -1,0 +1,2 @@
+models/trained/convnext_tiny_partial_fine_tuning/convnext_tiny_partial_fine_tuning.pth filter=lfs diff=lfs merge=lfs -text
+*.pth filter=lfs diff=lfs merge=lfs -text

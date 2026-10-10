@@ -1,0 +1,8 @@
+{
+    "experiment_name": "resnet18_feature_extraction",
+    "training_time_seconds": 244.47370219230652,
+    "epochs_completed": 25,
+    "best_epoch": 25,
+    "best_validation_loss": 1.4272984285203238,
+    "best_validation_accuracy": 0.47619047619047616
+}

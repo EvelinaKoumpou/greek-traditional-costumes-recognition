@@ -1,0 +1,9 @@
+{
+    "experiment_name": "convnext_tiny_feature_extraction",
+    "accuracy": 0.5645161290322581,
+    "top3_accuracy": 0.9193548387096774,
+    "macro_precision": 0.5962962962962963,
+    "macro_recall": 0.5555555555555556,
+    "macro_f1": 0.5658921144215262,
+    "weighted_f1": 0.5717366125335765
+}

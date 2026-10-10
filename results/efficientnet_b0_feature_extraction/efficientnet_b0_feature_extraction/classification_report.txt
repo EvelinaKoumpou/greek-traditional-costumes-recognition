@@ -1,0 +1,15 @@
+               precision    recall  f1-score   support
+
+      ipeiros     0.3333    0.4286    0.3750         7
+        kriti     0.0000    0.0000    0.0000         3
+    makedonia     0.4375    0.7000    0.5385        10
+nisia_aigaiou     0.5556    0.8333    0.6667        12
+ nisia_ioniou     1.0000    0.2500    0.4000         4
+ peloponnisos     0.6667    0.5714    0.6154         7
+sterea_ellada     0.5000    0.5000    0.5000         4
+    thessalia     0.0000    0.0000    0.0000         3
+       thraki     0.6000    0.3000    0.4000        10
+
+     accuracy                         0.5000        60
+    macro avg     0.4548    0.3981    0.3884        60
+ weighted avg     0.5007    0.5000    0.4653        60

@@ -1,0 +1,53 @@
+{
+    "experiment_name": "resnet18_partial_fine_tuning",
+    "model_architecture": "ResNet18",
+    "transfer_learning_mode": "Partial Fine-Tuning (layer4 + fc)",
+    "dataset": {
+        "number_of_classes": 9,
+        "class_names": [
+            "ipeiros",
+            "kriti",
+            "makedonia",
+            "nisia_aigaiou",
+            "nisia_ioniou",
+            "peloponnisos",
+            "sterea_ellada",
+            "thessalia",
+            "thraki"
+        ],
+        "image_size": 224,
+        "batch_size": 16
+    },
+    "hyperparameters": {
+        "learning_rate": 0.0001,
+        "weight_decay": 0.0001,
+        "maximum_epochs": 25,
+        "early_stopping_patience": 5,
+        "optimizer": "Adam",
+        "criterion": "CrossEntropyLoss"
+    },
+    "parameters": {
+        "total_parameters": 11181129,
+        "trainable_parameters": 8398345,
+        "frozen_parameters": 2782784
+    },
+    "training": {
+        "training_time_seconds": 79.12439489364624,
+        "epochs_completed": 12,
+        "best_epoch": 7,
+        "best_validation_loss": 1.2738404150993106,
+        "best_validation_accuracy": 0.6031746031746031
+    },
+    "test_metrics": {
+        "accuracy": 0.5483870967741935,
+        "macro_precision": 0.5765151515151515,
+        "macro_recall": 0.5396825396825397,
+        "macro_f1": 0.5402116402116401,
+        "weighted_f1": 0.546236559139785
+    },
+    "saved_files": {
+        "best_checkpoint": "/content/drive/MyDrive/ptyxiaki/models/checkpoints/resnet18_partial_fine_tuning/best_checkpoint.pth",
+        "final_model": "/content/drive/MyDrive/ptyxiaki/models/trained/resnet18_partial_fine_tuning/resnet18_partial_fine_tuning.pth",
+        "results_directory": "/content/drive/MyDrive/ptyxiaki/results/resnet18_partial_fine_tuning"
+    }
+}

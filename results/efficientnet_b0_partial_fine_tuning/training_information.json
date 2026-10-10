@@ -1,0 +1,8 @@
+{
+    "experiment_name": "efficientnet_b0_partial_fine_tuning",
+    "training_time_seconds": 116.10086679458618,
+    "epochs_completed": 25,
+    "best_epoch": 23,
+    "best_validation_loss": 1.4846915158014449,
+    "best_validation_accuracy": 0.4603174603174603
+}

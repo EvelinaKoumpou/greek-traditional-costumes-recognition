@@ -1,0 +1,275 @@
+<!doctype html> 
+<html lang="el"> 
+<head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+ 
+  <title>Αναγνώριση</title> 
+ 
+  <link rel="stylesheet" href="style.css"> 
+</head> 
+ 
+<body> 
+ 
+<header class="nav"> 
+  <div class="navInner"> 
+ 
+    <div class="logo"> 
+      Ελληνικές Φορεσιές 
+      <span>Μάθηση με χρήση πολυμέσων</span> 
+    </div> 
+ 
+    <nav class="menu"> 
+      <a href="/">Αρχική</a> 
+      <a class="is-active" href="/recognition">Αναγνώριση</a> 
+      <a href="/regions">Περιοχές & Φορεσιές</a> 
+      <a href="/about">Σχετικά</a> 
+    </nav> 
+ 
+  </div> 
+</header> 
+ 
+<main class="page"> 
+ 
+  <section class="pageIntro recognitionIntro"> 
+ 
+    <p class="heroEyebrow"> 
+      Αναγνώριση με Machine Learning 
+    </p> 
+ 
+    <h1 class="pageTitle"> 
+      Αναγνώριση Φορεσιάς 
+    </h1> 
+ 
+    <p class="pageLead"> 
+      Επίλεξε μια εικόνα ελληνικής παραδοσιακής φορεσιάς και άφησε 
+      το μοντέλο να εντοπίσει τις τρεις πιθανότερες περιοχές. 
+    </p> 
+ 
+  </section> 
+ 
+  <section class="recognitionLayout"> 
+ 
+    <form 
+      class="uploadBox" 
+      method="POST" 
+      action="/recognition" 
+      enctype="multipart/form-data" 
+    > 
+ 
+      <label 
+        class="uploadArea" 
+        id="uploadArea" 
+        for="imageInput" 
+      > 
+ 
+        <input 
+          type="file" 
+          id="imageInput" 
+          name="image" 
+          accept="image/png, image/jpeg, image/jpg, image/webp" 
+          required 
+        > 
+ 
+        <div class="uploadPlaceholder"> 
+ 
+          <div class="uploadIcon"> 
+            ＋ 
+          </div> 
+ 
+          <h2> 
+            Ανέβασε μια εικόνα 
+          </h2> 
+ 
+          <p> 
+            Πάτησε εδώ για να επιλέξεις φωτογραφία φορεσιάς 
+            από τον υπολογιστή σου. 
+          </p> 
+ 
+          <span class="uploadHint"> 
+            JPG, PNG ή WEBP 
+          </span> 
+ 
+        </div> 
+ 
+        <img 
+          class="imagePreview" 
+          id="imagePreview" 
+          alt="Προεπισκόπηση επιλεγμένης εικόνας" 
+        > 
+ 
+      </label> 
+ 
+      <div 
+        class="fileDetails" 
+        id="fileDetails" 
+      > 
+        <span 
+          class="fileName" 
+          id="fileName" 
+        ></span> 
+ 
+        <span class="fileHelp"> 
+          Η εικόνα είναι έτοιμη για αναγνώριση. 
+        </span> 
+      </div> 
+ 
+      <div class="recognitionActions"> 
+ 
+        <button 
+          class="btnPrimary" 
+          type="submit" 
+        > 
+          Αναγνώριση φορεσιάς 
+        </button> 
+ 
+        <button 
+          class="changeImageBtn" 
+          id="changeImageBtn" 
+          type="button" 
+        > 
+          Αλλαγή εικόνας 
+        </button> 
+ 
+      </div> 
+ 
+    </form> 
+ 
+    <aside class="recognitionInfo"> 
+ 
+      <p class="heroEyebrow"> 
+        Πώς λειτουργεί 
+      </p> 
+ 
+      <h2> 
+        Από την εικόνα στην περιοχή 
+      </h2> 
+ 
+      <p> 
+        Η εικόνα επεξεργάζεται από το εκπαιδευμένο μοντέλο ResNet18 
+        και συγκρίνεται με τις εννέα γεωγραφικές κατηγορίες. 
+      </p> 
+ 
+      <div class="recognitionSteps"> 
+ 
+        <div class="recognitionStep"> 
+          <span>1</span> 
+ 
+          <p> 
+            Επιλέγεις μια καθαρή εικόνα παραδοσιακής φορεσιάς. 
+          </p> 
+        </div> 
+ 
+        <div class="recognitionStep"> 
+          <span>2</span> 
+ 
+          <p> 
+            Το μοντέλο αναλύει τα οπτικά χαρακτηριστικά της. 
+          </p> 
+        </div> 
+ 
+        <div class="recognitionStep"> 
+          <span>3</span> 
+ 
+          <p> 
+            Εμφανίζονται οι τρεις πιθανότερες περιοχές. 
+          </p> 
+        </div> 
+ 
+      </div> 
+ 
+    </aside> 
+ 
+  </section> 
+ 
+  {% if results %} 
+ 
+  <section class="predictionSection"> 
+ 
+    <div class="predictionSummary"> 
+ 
+      <div> 
+ 
+        <p class="heroEyebrow"> 
+          Αποτελέσματα μοντέλου 
+        </p> 
+ 
+        <h2 class="predictionTitle"> 
+          Πιθανότερη περιοχή: 
+          {{ results[0].class_name }} 
+        </h2> 
+ 
+      </div> 
+ 
+    </div> 
+ 
+    <div class="predictionGrid"> 
+ 
+      {% for result in results %} 
+ 
+      <article class="predictionCard"> 
+ 
+        <span class="predictionRank"> 
+          {{ loop.index }} 
+        </span> 
+ 
+        <div class="predictionInfo"> 
+ 
+          <h3> 
+            {% if loop.index == 1 %}
+              1η πιθανότερη περιοχή
+            {% elif loop.index == 2 %}
+              2η πιθανότερη περιοχή
+            {% else %}
+              3η πιθανότερη περιοχή
+            {% endif %}
+          </h3> 
+ 
+          <p> 
+            {{ result.class_name }} 
+          </p> 
+ 
+        </div> 
+ 
+      </article> 
+ 
+      {% endfor %} 
+ 
+    </div> 
+ 
+  </section> 
+ 
+  {% endif %} 
+ 
+</main> 
+ 
+<script> 
+  const imageInput = document.getElementById("imageInput"); 
+  const imagePreview = document.getElementById("imagePreview"); 
+  const uploadArea = document.getElementById("uploadArea"); 
+  const fileDetails = document.getElementById("fileDetails"); 
+  const fileName = document.getElementById("fileName"); 
+  const changeImageBtn = document.getElementById("changeImageBtn"); 
+ 
+  imageInput.addEventListener("change", function () { 
+    const file = this.files[0]; 
+ 
+    if (!file) { 
+      return; 
+    } 
+ 
+    const previewUrl = URL.createObjectURL(file); 
+ 
+    imagePreview.src = previewUrl; 
+    uploadArea.classList.add("has-image"); 
+    fileDetails.classList.add("is-visible"); 
+    fileName.textContent = file.name; 
+  }); 
+ 
+  changeImageBtn.addEventListener("click", function () { 
+    imageInput.click(); 
+  }); 
+</script> 
+ 
+</body> 
+</html>

@@ -1,0 +1,8 @@
+{
+    "experiment_name": "efficientnet_b0_feature_extraction",
+    "training_time_seconds": 83.0489387512207,
+    "epochs_completed": 18,
+    "best_epoch": 13,
+    "best_validation_loss": 1.6637224602320837,
+    "best_validation_accuracy": 0.36507936507936506
+}

@@ -1,0 +1,9 @@
+{
+    "experiment_name": "convnext_tiny_partial_fine_tuning",
+    "accuracy": 0.7096774193548387,
+    "top3_accuracy": 0.9193548387096774,
+    "macro_precision": 0.730587622254289,
+    "macro_recall": 0.7083333333333334,
+    "macro_f1": 0.7063714407367658,
+    "weighted_f1": 0.7055718874154907
+}

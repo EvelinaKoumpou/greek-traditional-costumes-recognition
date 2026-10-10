@@ -1,0 +1,69 @@
+{
+    "ipeiros": {
+        "precision": 0.375,
+        "recall": 0.42857142857142855,
+        "f1-score": 0.4,
+        "support": 7.0
+    },
+    "kriti": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 3.0
+    },
+    "makedonia": {
+        "precision": 0.4444444444444444,
+        "recall": 0.8,
+        "f1-score": 0.5714285714285714,
+        "support": 10.0
+    },
+    "nisia_aigaiou": {
+        "precision": 0.6923076923076923,
+        "recall": 0.75,
+        "f1-score": 0.72,
+        "support": 12.0
+    },
+    "nisia_ioniou": {
+        "precision": 0.6666666666666666,
+        "recall": 0.5,
+        "f1-score": 0.5714285714285714,
+        "support": 4.0
+    },
+    "peloponnisos": {
+        "precision": 0.4,
+        "recall": 0.5714285714285714,
+        "f1-score": 0.47058823529411764,
+        "support": 7.0
+    },
+    "sterea_ellada": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 4.0
+    },
+    "thessalia": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 3.0
+    },
+    "thraki": {
+        "precision": 0.5714285714285714,
+        "recall": 0.4,
+        "f1-score": 0.47058823529411764,
+        "support": 10.0
+    },
+    "accuracy": 0.5,
+    "macro avg": {
+        "precision": 0.3499830416497083,
+        "recall": 0.3833333333333333,
+        "f1-score": 0.3560037348272642,
+        "support": 60.0
+    },
+    "weighted avg": {
+        "precision": 0.44263481888481887,
+        "recall": 0.5,
+        "f1-score": 0.45733333333333337,
+        "support": 60.0
+    }
+}

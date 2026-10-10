@@ -1,0 +1,8 @@
+{
+    "experiment_name": "efficientnet_b0_feature_extraction",
+    "accuracy": 0.5,
+    "macro_precision": 0.4547839506172839,
+    "macro_recall": 0.39814814814814814,
+    "macro_f1": 0.3883903133903134,
+    "weighted_f1": 0.46528846153846154
+}

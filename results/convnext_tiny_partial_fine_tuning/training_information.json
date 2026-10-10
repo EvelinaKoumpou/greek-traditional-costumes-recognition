@@ -1,0 +1,8 @@
+{
+    "experiment_name": "convnext_tiny_partial_fine_tuning",
+    "training_time_seconds": 115.64328789710999,
+    "epochs_completed": 21,
+    "best_epoch": 16,
+    "best_validation_loss": 1.0732803609636095,
+    "best_validation_accuracy": 0.6507936507936508
+}
